@@ -1,19 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html dir="rtl" data-intrack-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" style="--window-inner-height: 844px;">
 <head>
      <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
      <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
      <title>coffee</title>
 </head>
 <body>
-     <header>
-          <nav>
-               <a href="#">Home</a>
-               <a href="#">Contact</a>
-               <a href="#">Info</a>
-          </nav>
-     </header>
+
+     <!-- Navbar -->
+
+     <header class="header">
+
+        <div class="logo">
+            
+            <a href="#" class="logo"> Today<i class='bx bxs-coffee-bean'></i>Coffee</a>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="#" style="--i:0;">خانه</a>
+            <a href="#menu" style="--i:1;"> محصولات</a>
+            <a href="#our-services" style="--i:2;">سرویس ها</a>
+            <a href="#about" style="--i:3;">درباره ما</a>
+            <a href="#footer" style="--i:4;">ارتباط با ما</a>
+        </nav>
+
+        <div class="icons-s">
+        <div class="input_box">
+          <input type="text" placeholder="جستجو...">
+          <span class="search">
+               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0,0,256,256">
+                    <g fill="orange" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal; font-weight:bold"><g transform="scale(5.12,5.12)"><path d="M21,3c-9.37891,0 -17,7.62109 -17,17c0,9.37891 7.62109,17 17,17c3.71094,0 7.14063,-1.19531 9.9375,-3.21875l13.15625,13.125l2.8125,-2.8125l-13,-13.03125c2.55469,-2.97656 4.09375,-6.83984 4.09375,-11.0625c0,-9.37891 -7.62109,-17 -17,-17zM21,5c8.29688,0 15,6.70313 15,15c0,8.29688 -6.70312,15 -15,15c-8.29687,0 -15,-6.70312 -15,-15c0,-8.29687 6.70313,-15 15,-15z"></path></g></g>
+               </svg>
+          </span>
+          <svg class="close_icon"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 30 30">
+               <path fill="white" d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"></path>
+          </svg>
+       </div>
+            <div class="cart-bar">
+                <div class="cart-number">
+                    <p>0</p>
+                </div>
+                <i class="fas fa-shopping-cart" id="cart-btn"></i>
+            </div>
+        </div>
+
+
+
+    </header> 
+
+     <!-- Home Slider -->
 
      <div class="carousel">
           <div class="list">
@@ -41,7 +90,7 @@
                          <div class="title">قهوه</div>
                          <div class="topic">دمی</div>
                          <div class="des">
-                              قهوهٔ دمی یا قهوه فیلترشده (انگلیسی: Brewed coffee)، روش قهوه‌سازی است که در آن آب را بروی قهوهٔ برشته‌شدهٔ خردشده می‌ریزند و آب و قهوه از فیلتر عبور می‌کنند و در ظرف پائینی قهوه دم شده بدست می‌آید.دم کردن فرآیندی است که در آن دانه‌های قهوه در تماس با آب قرار می‌گیرند و ترکیبات محلول در آب این دانه‌های قهوه طعم و رایحه منحصربفرد خود را به آب می‌بخشند. 
+                              قهوهٔ دمی یا قهوه فیلترشده (انگلیسی: Brewed coffee)، روش قهوه‌سازی است که در آن آب را بروی قهوهٔ برشته‌شدهٔ خردشده می‌ریزند و آب و قهوه از فیلتر عبور می‌کنند و در ظرف پائینی قهوه دم شده بدست می‌آید
                          </div>
                          <div class="buttons">
                               <button>بیشتر بدانید</button>
@@ -86,8 +135,8 @@
           </div>
 
           <div class="thumbnail">
-               <div class="item">
-                    <img src="./img/coffee1.jpg" alt="">
+               <div class="item" >
+                    <img src="./img/coffee1.jpg" >
                     <div class="content">
                          <div class="title">
                               قهوه
@@ -97,7 +146,7 @@
                          </div>
                     </div>
                </div>
-               <div class="item">
+               <div class="item" >
                     <img src="./img/coffee2.jpg" alt="">
                     <div class="content">
                          <div class="title">
@@ -108,7 +157,7 @@
                          </div>
                     </div>
                </div>
-               <div class="item">
+               <div class="item" >
                     <img src="./img/coffee3.jpg" alt="">
                     <div class="content">
                          <div class="title">
@@ -119,8 +168,8 @@
                          </div>
                     </div>
                </div>
-               <div class="item">
-                    <img src="./img/coffee4.jpg" alt="">
+               <div class="item" >
+                    <img src="./img/coffee4.jpg" alt="" >
                     <div class="content">
                          <div class="title">
                               قهوه
@@ -133,13 +182,456 @@
           </div>
 
           <div class="arrows">
-               <button id="next"><</button>
-               <button id="prev">></button>
+               <button id="next" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><</button>
+               <button id="prev" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">></button>
           </div>
 
           <div class="time"></div>
      </div>
 
-     <script src="script.js"></script>
+     <!-- menu -->
+
+    <section class="menu" id="menu">
+        
+          <div class="title"  data-aos="fade-down" data-aos-duration="1200" >
+               <h3  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">دسته بندی محصولات </h3>
+               <h2  data-aos="fade-down" data-aos-duration="700" data-aos-delay="200">انواع قهوه ها با طعم های دلنشین</h2>
+          </div>
+
+          <div class="menu-container">
+
+               <div class="ctn-left">
+                   <h1  data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">قهوه های داغ</h1>
+                   <div class="ctn-coffee">
+   
+                       <div class="card" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="400">
+                           <div class="picture">
+                               <img src="img/products/s1.jpg" alt="">
+                               <div class="price">5$</div>
+                           </div>
+                           <div class="content">
+                               <h2>قهوه سیاه</h2>
+                               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،</p>
+                           </div>
+                       </div>
+   
+                       <div class="card" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
+                           <div class="picture">
+                               <img src="img/products/s2.jpeg" alt="">
+                               <div class="price">5$</div>
+                           </div>
+                           <div class="content">
+                               <h2>قهوه شکلات</h2>
+                               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،</p>
+                           </div>
+                       </div>
+   
+                       <div class="card" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="600">
+                           <div class="picture">
+                               <img src="img/products/s3.jpg" alt="">
+                               <div class="price">5$</div>
+                           </div>
+                           <div class="content">
+                               <h2>شیر قهوه</h2>
+                               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،</p>
+                           </div>
+                       </div>
+   
+                   </div>
+               </div>
+               <div class="ctn-right">
+                   <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">قهوه های سرد</h1>
+                   <div class="ctn-coffee">
+   
+                       <div class="card" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="400">
+                           <div class="picture">
+                               <img src="img/products/s4.jpg" alt="">
+                               <div class="price">5$</div>
+                           </div>
+                           <div class="content">
+                               <h2>قهوه سیاه</h2>
+                               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،</p>
+                           </div>
+                       </div>
+   
+                       <div class="card" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
+                           <div class="picture">
+                               <img src="img/products/s5.jpg" alt="">
+                               <div class="price">5$</div>
+                           </div>
+                           <div class="content">
+                               <h2>قهوه شکلات</h2>
+                               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،</p>
+                           </div>
+                       </div>
+   
+                       <div class="card" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="600">
+                           <div class="picture">
+                               <img src="img/products/s6.jpg" alt="">
+                               <div class="price">5$</div>
+                           </div>
+                           <div class="content">
+                               <h2>شیر قهوه</h2>
+                               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،</p>
+                           </div>
+                       </div>
+   
+                   </div>
+               </div>
+   
+           </div>
+    </section>
+
+     <section class="products" id="products" dir="rtl">
+          <h1 class="heading">محصولات ما</h1>
+
+          <div class="box-container">
+
+          <div class="box active" data-aos="fade-down" data-aos-duration="1500">
+               <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+               </div>
+               <div class="image">
+                    <img src="img/product.png" alt="">
+               </div>
+               <div class="content-hidden">
+                    <div class="content">
+                         <h3>قهوه گلد</h3>
+                         <div class="stars">
+                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                         </div>
+                         <div class="price">$15.99 <span>$20.99</span></div>
+                    </div>
+               </div>
+          </div>
+
+          <div class="box" data-aos="fade-down" data-aos-duration="1500">
+               <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+               </div>
+               <div class="image">
+                    <img src="img/product2.png" alt="">
+               </div>
+               <div class="content-hidden">
+               <div class="content">
+                    <h3>قهوه پرشین</h3>
+                    <div class="stars">
+                         <i class="fas fa-star-half-alt"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+               </div>
+               </div>
+          </div>
+
+          <div class="box" data-aos="fade-down" data-aos-duration="1500" >
+               <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+               </div>
+               <div class="image">
+                    <img src="img/product3.png" alt="">
+               </div>
+               <div class="content-hidden">
+               <div class="content">
+                    <h3>قهوه ترک</h3>
+                    <div class="stars">
+                         <i class="fas fa-star-half-alt"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+               </div>
+               </div>
+          </div>
+
+          </div>
+     </section>
+
+         <!-- book table -->
+
+         <section class="book-table" id="bookTable">
+    
+          <div class="booktable-container">
+  
+              <div class="content">
+              
+                  <h1>30% تخفیف</h1>
+              
+                  <h2>برای رزرو آنلاین</h2>
+              
+                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
+                      روزنامه
+                      و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                      ابزارهای
+                  </p>
+              
+                  <p><i class="fa-solid fa-check"></i>کیفیت بالا</p>
+              
+                  <p><i class="fa-solid fa-check"></i>پرطرفدار</p>
+              
+                  <p><i class="fa-solid fa-check"></i>تایید شده توسظ وزارت بهداشت</p>
+              
+              </div>
+  
+              <div class="inputs">
+                  <h1>رزرو میز</h1>
+                  <input type="text" placeholder="نام">
+                  <input type="text" placeholder="ایمیل">
+                  <input type="text" placeholder="تاریخ">
+                  <input type="text" placeholder="ساعت">
+                  <input type="text" placeholder="تعداد">
+                  <button type="submit">رزرو کردن</button>
+              </div>
+  
+          </div>
+  
+      </section>
+
+
+
+     <!-- Our Services -->
+
+     <section id="our-services">
+          <div class="title"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="800">
+               <h3  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">سرویس های ما</h3>
+               <h2  data-aos="fade-down" data-aos-duration="700" data-aos-delay="300"> دانه های تازه و اورگانیک قهوه </h2>
+          </div>
+
+          <div class="cart-item-container">
+               <div class="cart-item">
+                    <img src="./img/our_services_door_delivery.jpg" alt="door_delivery" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="1000">
+                    <div class="content" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="900">
+                         <h3>ارسال سریع درب منزل</h3>
+                         <p>یکی از مزایای خرید از  قهوه تودی ، گزینه‌های ارسال متنوع و امن آن است. در این روش‌های به روز و کارآمد، بر حسب نوع خرید، بسته‌های شما روش‌های مختلفی برای رسیدن به دست شما را طی می‌کنند</p>
+                    </div>
+               </div>
+               <div class="cart-item" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="900">
+                    <img src="./img/our_services_beans.jpg" alt="coffee-beans" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="1000">
+                    <div class="content">
+                         <h3>دانه های قهوه تازه</h3>
+                         <p>دانه های قهوه را می توان به چهار نوع عربیکا، روبوستا، لیبریکا و اکسلسا طبقه بندی کرد. این ها چهار گونه اصلی دانه قهوه هستند.</p>
+                    </div>
+               </div>
+               <div class="cart-item" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="900">
+                    <img src="./img/our_services_booking.jpg" alt="book-table-online" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="1000">
+                    <div class="content">
+                         <h3>رزرو آنلاین  </h3>
+                         <p>یکی از مزایای خرید ازرقهوه تودی رزرو انلاین میز هستش که میتونید به راحتی و با موبایلی که تو دستتون دارید انجامش بدید تا در وقتتون هم صرفه جویی بشه. </p>
+                    </div>
+               </div>
+               <div class="cart-item" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="900">
+                    <img src="./img/our_services_quality.jpg" alt="the-best-quality-coffee" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="1000">
+                    <div class="content">
+                         <h3>بهترین کیفیت قهوه</h3>
+                         <p>کیفیت قهوه های ما، قهوه تودی را از بقیه رقبا متمایز میکند و این میتونه دلیل خیلی خوبی برای خرید از ما باشه.</p>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+      <!-- Special Offer -->
+
+     <section id="special-offer">
+          <div class="container-img">
+               <div class="content">
+                    <h2>50% تخفیف</h2>
+                    <h3>جمعه ها با تخفیف شگفت انگیز</h3>
+                    <p>فقط برای جمعه های باورنکردنی قهوه تودی از 1 اسفند تا 29 اسفند </p>
+                   <form action="">
+                         <a> <span></span>ورود</a>
+                        <input type="email" placeholder="ایمیل">
+                   </form>
+               </div>
+          </div>
+     </section>
+
+     <!-- About Us -->
+
+     <section id="about">
+          <div class="title"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="500">
+               <h3  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">درباره ما</h3>
+               <h2  data-aos="fade-down" data-aos-duration="800" data-aos-delay="500">اینجا قهوه تودی هست,بایک قرن خاطره </h2>
+          </div>
+          <div class="content">
+               <div class="our_sotry">
+                    <h3 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">داستان ما</h3>
+                    <p data-aos="fade-left" data-aos-duration="1200" data-aos-delay="500">از زمان تاسیس قهوه تودی در سال 1311 هجری شمسی توسط یک بانوی ارمنی از اجداد ما، نزدیک به یک قرن است که افتخار همراهی با شما را داریم و بعنوان اولین تولید کننده قهوه در ایران به این همراهی می بالیم.</p>
+                    <p data-aos="fade-left" data-aos-duration="1200" data-aos-delay="500"> بسیاری از مشتریان ما از زمان کودکی به همراه پدر و مادر یا بعضاً پدربزرگ و مادربزرگ خود برای خرید قهوه به فروشگاه ما آمده اند و امروز با مرور خاطراتشان در زمان خرید، شعف دوچندان به همکاران ما هدیه می دهند. </p>
+                    <button data-aos="fade-left" data-aos-duration="1400" data-aos-delay="500">بیشتر بدانید</button>
+               </div>
+               <div class="content_img">
+                    <img src="./img/about_img.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+               </div>
+               <div class="feature">
+                    <h3 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">ویژگی های ما</h3>
+                    <p data-aos="fade-right" data-aos-duration="1200" data-aos-delay="500">مهمترین دلیل بقاء، ماندگاری و پیشرفت قهوه تودی توجه به کیفیت و خواسته های شما و استفاده از ابزارهای روز برای تامین مناسب تر نیازهای مشتریان خود است. برای پاسخ دادن به نیازهای شما عزیزان و به پاس قدردانی از همراهی ارزشمندتان در این سالهای طولانی، تلاش کرده ایم تا هرآنچه برای نوشیدن قهوه نیاز دارید را با بهترین کیفیت و راحت ترین راه دسترسی ممکن برایتان فرآهم کنیم.</p>
+                    <ul data-aos="fade-right" data-aos-duration="1400" data-aos-delay="500">
+                         <li>توجه به کیفیت</li>
+                         <li>فرمول خاص </li>
+                         <li>طعم اصیل انواع قهوه </li>
+                    </ul>
+                    <button data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">بیشتر بدانید</button>
+               </div>
+          </div>
+     </section>
+
+     <!-- Our Client Say -->
+
+     <section id="comments">
+          <div class="title"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="800">
+               <h3  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">رضایت مشتری</h3>
+               <h2  data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">نظرات شما </h2>
+          </div>
+
+            <!-- Swiper -->
+          <div class="swiper card-container" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">
+               <div class="card-wrapper ">
+                    <div class="card-list swiper-wrapper" >
+                         <div class="card-item swiper-slide" >
+                              <div class="card-img">
+                                   <img src="./img/costumers1.jpg" alt="">
+                                   <div class="card-title">
+                                        <h3>محمد رضا</h3>
+                                        <h5>برنامه نویس</h5>
+                                   </div>
+                              </div>
+                              <div class="card-des">
+                                   <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                              </div>
+                         </div>
+                         <div class="card-item swiper-slide" data-aos="fade-left">
+                              <div class="card-img">
+                                   <img src="./img/costumers2.jpg" alt="">
+                                   <div class="card-title">
+                                        <h3>زهرا</h3>
+                                        <h5>برنامه نویس</h5>
+                                   </div>
+                              </div>
+                              <div class="card-des">
+                                   <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                              </div>
+                         </div>
+                         <div class="card-item swiper-slide">
+                              <div class="card-img">
+                                   <img src="./img/costumers3.jpg" alt="">
+                                   <div class="card-title">
+                                        <h3>جکی</h3>
+                                        <h5>برنامه نویس</h5>
+                                   </div>
+                              </div>
+                              <div class="card-des">
+                                   <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                              </div>
+                         </div>
+                         <div class="card-item swiper-slide">
+                              <div class="card-img">
+                                   <img src="./img/costumers4.jpg" alt="">
+                                   <div class="card-title">
+                                        <h3>انتونیو</h3>
+                                        <h5>برنامه نویس</h5>
+                                   </div>
+                              </div>
+                              <div class="card-des">
+                                   <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                              </div>
+                         </div>
+                         <div class="card-item swiper-slide">
+                              <div class="card-img">
+                                   <img src="./img/costumers5.jpg" alt="">
+                                   <div class="card-title">
+                                        <h3>فاطمه</h3>
+                                        <h5>برنامه نویس</h5>
+                                   </div>
+                              </div>
+                              <div class="card-des">
+                                   <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+               </div>
+          </div>
+     </section>
+
+     <!-- footer -->
+
+     <section class="footer" id="footer" dir="rtl" data-aos="fade-up" data-aos-duration="1500">
+
+          <div class="overlay"></div>
+  
+          <div class="footer-ctn">
+  
+              <div class="card">
+                  <h1>اطلاعات تماس</h1>
+                  <p>قم.خیابان آرزو.کوچه خیال.پلاک 14</p>
+                  <p>012 345 67890+</p>
+                  <p>forexampl@gmail.com</p>
+              </div>
+  
+              <div class="card">
+                  
+                  <h1>ما را دنبال کنید</h1>
+  
+                  <p>شبکه های اجتماعی</p>
+  
+                  <div class="icon-box">
+                      <i class="fa-brands fa-youtube"></i>
+                      <i class="fa-brands fa-instagram"></i>
+                      <i class="fa-brands fa-linkedin-in"></i>
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <i class="fa-brands fa-twitter"></i>
+                  </div>
+  
+              </div>
+  
+              <div class="card">
+                  <h1>ساعات کاری</h1>
+  
+                  <h2>شنبه تا پنجشنبه</h2>
+                  <p>7:00 تا 23:00</p>
+  
+                  <h2>جمعه</h2>
+                  <p>7:00 تا 13:00</p>
+              </div>
+  
+              <div class="card">
+                  <h1>آخرین اخبار</h1>
+                  <p>جهت مطلع شدن از آخرین اخبار ایمیل خود را وارد کنید</p>
+                  <div class="insert-box">
+                      <button>ارسال</button>
+                      <input type="text" placeholder="forexample@gmail.com">
+                  </div>
+  
+              </div>
+          </div>
+  
+          <h1>طراحی شده توسط آرسنال و هادی فرانت اند</h1>
+  
+      </section>
+
+
+     
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+     AOS.init();
+     </script>
 </body>
 </html>
